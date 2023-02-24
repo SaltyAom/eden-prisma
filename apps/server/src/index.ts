@@ -13,8 +13,8 @@ const app = new Elysia()
             check: ({ match }) =>
                 match({
                     'user.create': ([param]) => {
-                        if (!param.data.name)
-                            throw new Error('Name is required')
+                        if (param.data.name === 'saltyaom')
+                            throw new Error("Can't use name as 'saltyaom'")
                     }
                 })
         })
