@@ -1,26 +1,24 @@
 import { Elysia } from 'elysia'
 import { cors } from '@elysiajs/cors'
 
-import { PrismaClient } from '@prisma/client'
-
-const prisma = new PrismaClient()
+import { PrismaClient } from '@prisma/client/edge'
 
 const app = new Elysia()
     .use(cors())
     .get('/', () => 'Hello Elysia')
-    .get('/ai', async () => {
-        return 'ai'
-
-        // prisma.user.create({
-        //     data: {
-        //         name: 'saltyaom',
-        //         email: 'saltyaom@gmail.com'
-        //     }
-        // })
-    })
-    .fn({
-        mirror: async <T>(v: T) => v
-    })
+    .fn(({ permission }) => ({
+        prisma: permission({
+            value: new PrismaClient(),
+            allow: ['user.create'],
+            check: ({ match }) =>
+                match({
+                    'user.create': ([param]) => {
+                        if (!param.data.name)
+                            throw new Error('Name is required')
+                    }
+                })
+        })
+    }))
     .listen(8080)
 
 export type App = typeof app

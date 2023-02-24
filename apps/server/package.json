@@ -4,7 +4,8 @@
   "main": "./src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --hot src/index.ts",
+    "postinstall": "prisma generate --data-proxy"
   },
   "dependencies": {
     "@elysiajs/cors": "^0.1.0",
