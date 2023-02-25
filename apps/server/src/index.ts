@@ -14,6 +14,11 @@ const app = new Elysia()
         }
     })
     .fn(({ permission }) => ({
+        mirror: async <T extends string>(value: T) => {
+            if (value === 'false') throw new Error("Value can't be false")
+
+            return value
+        },
         prisma: permission({
             value: new PrismaClient(),
             allow: ['user.create'],
