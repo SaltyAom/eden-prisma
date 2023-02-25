@@ -17,12 +17,12 @@ importers:
       '@elysiajs/cors': ^0.1.0
       '@prisma/client': ^4.10.1
       bun-types: latest
-      elysia: 0.3.0-exp-240224.141
+      elysia: 0.3.0-beta.0
       prisma: ^4.10.1
     dependencies:
-      '@elysiajs/cors': 0.1.0_ibxro4ccx445lljnoeljff2yvi
+      '@elysiajs/cors': 0.1.0_elysia@0.3.0-beta.0
       '@prisma/client': 4.10.1_prisma@4.10.1
-      elysia: 0.3.0-exp-240224.141
+      elysia: 0.3.0-beta.0
       prisma: 4.10.1
     devDependencies:
       bun-types: 0.5.7
@@ -91,10 +91,10 @@ importers:
 
   packages/shared:
     specifiers:
-      '@elysiajs/eden': 0.3.0-exp-230224.1831
+      '@elysiajs/eden': 0.3.0-beta.0
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
-      elysia: 0.3.0-exp-240224.141
+      elysia: 0.3.0-beta.0
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
       react: ^18.2.0
@@ -102,8 +102,8 @@ importers:
       tsconfig: workspace:*
       typescript: ^4.9.4
     dependencies:
-      '@elysiajs/eden': 0.3.0-exp-230224.1831_ibxro4ccx445lljnoeljff2yvi
-      elysia: 0.3.0-exp-240224.141
+      '@elysiajs/eden': 0.3.0-beta.0_elysia@0.3.0-beta.0
+      elysia: 0.3.0-beta.0
     devDependencies:
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
@@ -330,20 +330,20 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
 
-  /@elysiajs/cors/0.1.0_ibxro4ccx445lljnoeljff2yvi:
+  /@elysiajs/cors/0.1.0_elysia@0.3.0-beta.0:
     resolution: {integrity: sha512-UE+aJY8jI++j4BnJ5I4bU3HH5KXHogSTjlJ84ZqTr97Uorz20tR2pLz2ZL94MNK3aLyESk1etjXg8qdfrWeHUg==}
     peerDependencies:
       elysia: '>= 0.1.0-rc.5'
     dependencies:
-      elysia: 0.3.0-exp-240224.141
+      elysia: 0.3.0-beta.0
     dev: false
 
-  /@elysiajs/eden/0.3.0-exp-230224.1831_ibxro4ccx445lljnoeljff2yvi:
-    resolution: {integrity: sha512-MUc1w42xy3VrPhfTUBY14z0Og8xdtE/E/rDV/mILtLJOIWfu32gUZVYGqxCDnPwROdHVIbrsJ5GdV43jxsYDRw==}
+  /@elysiajs/eden/0.3.0-beta.0_elysia@0.3.0-beta.0:
+    resolution: {integrity: sha512-yzOcpunHwEX7rorhvMsDlHQnJdojcHSYQVUTjgK0yrf8v9/LZPtBm9lcltVhp5mWQhAd6zjJxeOI+/TW4GOUIw==}
     peerDependencies:
-      elysia: '>= 0.3.0-exp-230223.1133'
+      elysia: '>= 0.3.0-beta.0'
     dependencies:
-      elysia: 0.3.0-exp-240224.141
+      elysia: 0.3.0-beta.0
       superjson: 1.12.2
     dev: false
 
@@ -1111,8 +1111,8 @@ packages:
   /electron-to-chromium/1.4.310:
     resolution: {integrity: sha512-/xlATgfwkm5uDDwLw5nt/MNEf7c1oazLURMZLy39vOioGYyYzLWIDT8fZMJak6qTiAJ7udFTy7JG7ziyjNutiA==}
 
-  /elysia/0.3.0-exp-240224.141:
-    resolution: {integrity: sha512-5RZjSh9Ip/TEcfC7bH6SbQtTADSsO47cnNrlw69gS/n/LjeNFq0BL1PWUY3wMDjWIKffeQysnC8nDMDBZqpX6Q==}
+  /elysia/0.3.0-beta.0:
+    resolution: {integrity: sha512-Hec8g6I3jxE6LDqgxL2Dcm6rxUVn5k3qhHlTCQrwTzGMOFN5zHgUDb4Qek1Efgti/DVr8J20kcC68QWD5pHCiw==}
     peerDependenciesMeta:
       '@sinclair/typebox':
         optional: true

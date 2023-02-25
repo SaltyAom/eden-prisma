@@ -1,11 +1,18 @@
-import { Elysia } from 'elysia'
+import { Elysia, permission, t } from 'elysia'
 import { cors } from '@elysiajs/cors'
 
 import { PrismaClient } from '@prisma/client/edge'
 
 const app = new Elysia()
     .use(cors())
-    .get('/', () => 'Hello Elysia')
+    .get('/', () => 'Hello Elysia', {
+        schema: {
+            body: t.String({
+                minLength: 8,
+                maxLength: 8
+            })
+        }
+    })
     .fn(({ permission }) => ({
         prisma: permission({
             value: new PrismaClient(),
