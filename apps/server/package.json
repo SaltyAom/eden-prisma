@@ -9,9 +9,9 @@
     "postinstall": "prisma generate --data-proxy"
   },
   "dependencies": {
-    "@elysiajs/cors": "^0.1.0",
+    "@elysiajs/cors": "^0.3.0",
     "@prisma/client": "^4.10.1",
-    "elysia": "0.3.0-beta.1",
+    "elysia": "^0.3.1",
     "prisma": "^4.10.1"
   },
   "devDependencies": {
